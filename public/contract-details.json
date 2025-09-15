@@ -1,0 +1,51 @@
+{
+  "c1": {
+    "id": "c1",
+    "name": "MSA 2025",
+    "parties": "Microsoft & ABC Corp",
+    "start": "2023-01-01",
+    "expiry": "2025-12-31",
+    "status": "Active",
+    "risk": "Medium",
+    "clauses": [
+      { "title": "Termination", "summary": "90 days notice period required for contract termination.", "confidence": 0.82 },
+      { "title": "Liability Cap", "summary": "Total liability limited to 12 months' fees paid.", "confidence": 0.87 },
+      { "title": "Data Protection", "summary": "GDPR compliance required for all data processing.", "confidence": 0.91 },
+      { "title": "Service Level Agreement", "summary": "99.9% uptime guarantee with penalty clauses.", "confidence": 0.85 }
+    ],
+    "insights": [
+      { "risk": "High", "message": "Liability cap excludes data breach costs and could expose organization to significant risk." },
+      { "risk": "Medium", "message": "Contract auto-renews unless cancelled 60 days before expiry date." },
+      { "risk": "Low", "message": "Standard termination clause provides adequate notice period." }
+    ],
+    "evidence": [
+      { "source": "Section 12.2", "snippet": "Total liability shall be limited to the total amount of fees paid by Customer in the twelve (12) months preceding the claim.", "relevance": 0.91 },
+      { "source": "Section 8.1", "snippet": "Either party may terminate this Agreement upon ninety (90) days written notice.", "relevance": 0.88 },
+      { "source": "Section 15.3", "snippet": "This Agreement shall automatically renew for successive one-year terms unless terminated by either party.", "relevance": 0.85 }
+    ]
+  },
+  "c2": {
+    "id": "c2",
+    "name": "Network Services Agreement",
+    "parties": "TelNet & ABC Corp",
+    "start": "2023-05-15",
+    "expiry": "2025-10-10",
+    "status": "Renewal Due",
+    "risk": "High",
+    "clauses": [
+      { "title": "Service Availability", "summary": "Network uptime guarantee of 99.5% with limited remedies.", "confidence": 0.79 },
+      { "title": "Unlimited Liability", "summary": "No liability cap for service provider negligence.", "confidence": 0.93 },
+      { "title": "Exclusive Remedy", "summary": "Service credits are the sole remedy for outages.", "confidence": 0.86 }
+    ],
+    "insights": [
+      { "risk": "High", "message": "Unlimited liability exposure for provider negligence creates significant risk." },
+      { "risk": "High", "message": "Service credits may not adequately compensate for business losses." },
+      { "risk": "Medium", "message": "99.5% uptime allows for significant downtime per year." }
+    ],
+    "evidence": [
+      { "source": "Section 4.1", "snippet": "Provider's liability for negligence shall not be limited or excluded.", "relevance": 0.95 },
+      { "source": "Section 6.2", "snippet": "Customer's sole remedy for service outages shall be service credits as defined herein.", "relevance": 0.89 },
+      { "source": "Section 3.1", "snippet": "Provider guarantees 99.5% network availability measured monthly.", "relevance": 0.82 }
+    ]
+  }
+}
