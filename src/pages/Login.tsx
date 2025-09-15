@@ -38,7 +38,7 @@ const Login: React.FC = () => {
             </div>
           </div>
           <h2 className="mt-6 text-3xl font-bold text-gray-900">
-            Welcome to ContractAI
+            Welcome to ContractHub
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             Sign in to access your contracts dashboard

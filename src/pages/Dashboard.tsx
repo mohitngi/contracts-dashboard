@@ -2,25 +2,13 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
-  Filter, 
   AlertTriangle, 
   Clock, 
   CheckCircle,
-  TrendingUp,
   FileText,
   Calendar
 } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
-
-interface Contract {
-  id: string;
-  name: string;
-  parties: string;
-  expiry: string;
-  status: 'Active' | 'Expired' | 'Renewal Due';
-  risk: 'Low' | 'Medium' | 'High';
-  start: string;
-}
 
 const Dashboard: React.FC = () => {
   const { contracts, setContracts, isLoading, setIsLoading, error, setError } = useApp();
@@ -30,11 +18,7 @@ const Dashboard: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  useEffect(() => {
-    fetchContracts();
-  }, []);
-
-  const fetchContracts = async () => {
+  const fetchContracts = React.useCallback(async () => {
     setIsLoading(true);
     setError(null);
     try {
@@ -49,7 +33,11 @@ const Dashboard: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [setContracts, setIsLoading, setError]);
+
+  useEffect(() => {
+    fetchContracts();
+  }, [fetchContracts]);
 
   const filteredContracts = useMemo(() => {
     return contracts.filter(contract => {

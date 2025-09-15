@@ -4,7 +4,7 @@ A modern, responsive React application for managing and analyzing contracts with
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-deployment-url.vercel.app) _(Replace with actual deployment URL)_
+[View Live Demo](https://contractsdashboard.vercel.app) _(Replace with actual deployment URL)_
 
 ## 📋 Features
 
