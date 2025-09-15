@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileBarChart, Download, Calendar } from 'lucide-react';
+import { FileBarChart, Download } from 'lucide-react';
 
 const Reports: React.FC = () => {
   return (
